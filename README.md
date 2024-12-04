@@ -1,17 +1,14 @@
 ## Static code analysis
 
-### Prerequisites
-- Ensure [Gradle](https://gradle.org/install/) is installed.
-- Java 21
-
 ### Install and Run
-1. Install dependencies and build the project:
+1. Install analysis:
    ```bash
    pip install pylint
    ```
-2. Run the application:
+2. Run analysis:
    ```bash
-   pylint main.py or pylint .
+   pylint main.py
+   pylint .
    ```	
 
 ## External Reviewer
