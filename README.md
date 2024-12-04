@@ -1,5 +1,5 @@
 ## Static code analysis
-
+This project use pylint for static code analysis. and the file configuration is https://github.com/Maphineth-UNG/ASCII_Conversion/blob/main/.pylintrc 
 ### Install and Run
 1. Install analysis:
    ```bash
