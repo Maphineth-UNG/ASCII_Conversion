@@ -441,6 +441,7 @@ disable=missing-module-docstring,
         deprecated-pragma,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
+        import-error,
         use-symbolic-message-instead
         
 
