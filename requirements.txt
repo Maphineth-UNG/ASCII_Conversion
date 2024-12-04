@@ -1,0 +1,4 @@
+rich
+click
+pytest
+pylint
