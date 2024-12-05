@@ -16,7 +16,3 @@ git clone https://github.com/Maphineth-UNG/ASCII_Conversion.git
 cd ascii-converter
 pip install -r requirements.txt
 
-## Usage
-
-```bash
-python3 main.py
