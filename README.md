@@ -1,4 +1,4 @@
-# ASCII Converter
+# TextNumberConverter
 
 ## Overview
 A simple command-line tool to convert ASCII text to binary, decimal, or hexadecimal representation. Built using Python, this tool is designed to be easy to use, providing accurate conversions for learning and testing.
