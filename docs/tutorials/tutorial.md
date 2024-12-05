@@ -18,7 +18,7 @@ Before you start, make sure you have:
    ```bash
     git clone https://github.com/Maphineth-UNG/ASCII_Conversion.git
 
-2. **Navigate to the project folder**:
+2. **Navigate to the project folder**
 
 3. **Install dependencies**:
     ```bash
