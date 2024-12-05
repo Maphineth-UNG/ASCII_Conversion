@@ -12,6 +12,11 @@ A simple command-line tool to convert ASCII text to binary, decimal, or hexadeci
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/ascii-converter.git
+git clone https://github.com/Maphineth-UNG/ASCII_Conversion.git
 cd ascii-converter
 pip install -r requirements.txt
+
+## Usage
+
+``bash
+python3 main.py
