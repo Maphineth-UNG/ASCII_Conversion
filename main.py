@@ -1,3 +1,17 @@
+"""
+ASCII Conversion Tool
+
+This script provides functions to convert ASCII text to different formats:
+binary, decimal, and hexadecimal. It also allows the user to choose the
+desired conversion type through a command-line interface.
+
+Key Features:
+- ASCII to binary conversion.
+- ASCII to decimal conversion.
+- ASCII to hexadecimal conversion.
+- User-friendly CLI using Click.
+"""
+
 import logging
 import click
 from rich.console import Console
@@ -11,25 +25,78 @@ logger = logging.getLogger(__name__)
 # Set up Rich console
 console = Console()
 
-# Function to convert ASCII to Binary
-def ascii_to_binary(text):
+def ascii_to_binary(text: str) -> str:
+    """
+    Convert ASCII text to its binary representation.
+
+    Args:
+        text (str): The ASCII text to be converted.
+
+    Returns:
+        str: A space-separated string representing the binary equivalent of each character in the input text.
+
+    Example:
+        >>> ascii_to_binary("AB")
+        '01000001 01000010'
+    """
     logger.debug("Converting ASCII text '%s' to binary", text)
     return ' '.join(format(ord(char), '08b') for char in text)
 
-# Function to convert ASCII to Decimal
-def ascii_to_decimal(text):
+def ascii_to_decimal(text: str) -> str:
+    """
+    Convert ASCII text to its decimal representation.
+
+    Args:
+        text (str): The ASCII text to be converted.
+
+    Returns:
+        str: A space-separated string representing the decimal equivalent of each character in the input text.
+
+    Example:
+        >>> ascii_to_decimal("AB")
+        '65 66'
+    """
     logger.debug("Converting ASCII text '%s' to decimal", text)
     return ' '.join(str(ord(char)) for char in text)
 
-# Function to convert ASCII to Hexadecimal
-def ascii_to_hexadecimal(text):
+def ascii_to_hexadecimal(text: str) -> str:
+    """
+    Convert ASCII text to its hexadecimal representation.
+
+    Args:
+        text (str): The ASCII text to be converted.
+
+    Returns:
+        str: A space-separated string representing the hexadecimal equivalent of each character in the input text.
+
+    Example:
+        >>> ascii_to_hexadecimal("AB")
+        '41 42'
+    """
     logger.debug("Converting ASCII text '%s' to hexadecimal", text)
     return ' '.join(format(ord(char), '02x') for char in text)
 
-# Command-line interface using Click
 @click.command()
 @click.option('--text', prompt='Enter the ASCII text to convert', help='The ASCII text to be converted.')
-def convert_ascii(text):
+def convert_ascii(text: str) -> None:
+    """
+    Command-line interface for ASCII conversion.
+
+    Prompts the user to select a conversion type (binary, decimal, or hexadecimal)
+    and displays the converted result.
+
+    Args:
+        text (str): The ASCII text to be converted.
+
+    Example Usage:
+        $ python main.py --text "Hello"
+        Choose the conversion type:
+        1. Binary
+        2. Decimal
+        3. Hexadecimal
+        Enter your choice (1/2/3): 1
+        Binary representation of 'Hello': 01001000 01100101 01101100 01101100 01101111
+    """
     console.print("Choose the conversion type:")
     table = Table(show_header=True, header_style="bold magenta")
     table.add_column("Option", style="dim")
@@ -68,7 +135,6 @@ def convert_ascii(text):
     else:
         logger.error("Invalid choice. Please enter 1, 2, or 3.")
         console.print("[red]Invalid choice. Please enter 1, 2, or 3.[/red]")
+
 if __name__ == "__main__":
-    # import doctest
-    # doctest.testmod()
     convert_ascii()
