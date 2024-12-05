@@ -429,7 +429,18 @@ confidence=HIGH,
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
-disable=missing-module-docstring,
+disable=raw-checker-failed,
+;         bad-inline-option,
+;         locally-disabled,
+;         file-ignored,
+;         suppressed-message,
+;         useless-suppression,
+;         deprecated-pragma,
+;         use-symbolic-message-instead,
+;         use-implicit-booleaness-not-comparison-to-string,
+;         no-value-for-parameter
+;         use-implicit-booleaness-not-comparison-to-zero
+        missing-module-docstring,
         missing-function-docstring,
         no-value-for-parameter,
         raw-checker-failed,
@@ -443,7 +454,6 @@ disable=missing-module-docstring,
         use-implicit-booleaness-not-comparison-to-zero,
         import-error,
         use-symbolic-message-instead
-        
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -536,8 +546,8 @@ min-similarity-lines=4
 # Limits count of emitted suggestions for spelling mistakes.
 max-spelling-suggestions=4
 
-# Spelling dictionary name. Available dictionaries: en (aspell), en_AU
-# (aspell), en_CA (aspell), en_GB (aspell), en_US (aspell).
+# Spelling dictionary name. No available dictionaries : You need to install
+# both the python package and the system dependency for enchant to work.
 spelling-dict=
 
 # List of comma separated words that should be considered directives if they

@@ -69,4 +69,6 @@ def convert_ascii(text):
         logger.error("Invalid choice. Please enter 1, 2, or 3.")
         console.print("[red]Invalid choice. Please enter 1, 2, or 3.[/red]")
 if __name__ == "__main__":
+    # import doctest
+    # doctest.testmod()
     convert_ascii()
